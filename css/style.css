@@ -1,0 +1,234 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: #FDFBF6;
+    min-height: 100vh;
+    
+}
+
+@media (max-width: 900px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 100px 20px 40px 20px;
+    }
+
+    .image {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .navbar ul {
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .home div {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        height: 55px;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        font-size: 13px;
+    }
+
+    .sosmed {
+        gap: 8px;
+    }
+
+    .sosmed a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .tec img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .h2 {
+        font-size: 16px;
+    }
+
+    .p {
+        font-size: 0.85rem;
+    }
+}
+
+
+hr {
+  border: none;
+  border-top: 1px solid #1C1C1C;
+  width: 100%;
+}
+
+.navbar{
+    position:fixed;
+    height: 60px;
+    background: transparent; /* transparan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(30px);
+    width: 100%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin: 0px;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    font-weight: 1000;
+    color: black;
+    
+} 
+
+.navbar ul li a:hover{
+    color: #26593a;
+    text-decoration: underline;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 80px 5% 50px 5%;
+
+}
+.image{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 320px;
+    border: 1px solid black ;
+    padding: 30px;
+   
+
+}
+.main img{
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid black;
+    display: block;
+}
+.h2 {
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.p {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.sosmed {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.sosmed a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #1C1C1C;
+    padding: 8px 16px;
+    border: 1.5px solid #1C1C1C;
+    border-radius: 25px; /* Bikin tombol lonjong/rounded */
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Hover Efek Warna Aplikasi (Sama seperti sebelumnya) */
+.sosmed a.link-linkedin:hover { background: #0077b5; color: white; border-color: #0077b5; }
+.sosmed a.link-wa:hover { background: #25d366; color: white; border-color: #25d366; }
+.sosmed a.link-github:hover { background: #333; color: white; border-color: #333; }
+.sosmed a.link-email:hover { background: #db4437; color: white; border-color: #db4437; }
+
+/* Efek sedikit membesar saat di-hover */
+.sosmed a:hover {
+    transform: translateY(-3px); /* Tombol naik sedikit */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.home{
+    text-align: center;
+    border-bottom: 1px black solid;
+    padding: 20px 0;
+    border-top: #000000 1px solid;
+    
+}
+.home div {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+.label {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #1C1C1C;
+}
+
+.tec {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap; /* Agar ikon turun ke bawah jika layar sempit */
+}
+
+.tec img {
+    width: 45px; /* Ukuran ikon yang ideal */
+    height: 45px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(20%); /* Memberikan kesan estetik sedikit abu-abu */
+}
+
+.tec img:hover {
+    transform: scale(1.2); /* Ikon membesar saat disentuh */
+    filter: grayscale(0%); /* Warna menjadi full saat di-hover */
+}
+.github-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.chart-wrapper {
+    width: 100%;
+}
+
+.chart-wrapper img {
+    width: 100%;        /* paksa penuh */      /* biar proporsional */
+    display: block;     /* hilangin jarak bawah gambar */
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
