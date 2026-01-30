@@ -1,15 +1,19 @@
+/* ========== RESET & FONT DASAR ========== */
 *{
     font-family: 'Times New Roman', Times, serif;
 }
+
+/* Background utama halaman */
 body{
     background-color: #FDFBF6;
     min-height: 100vh;
-    
 }
 
+
+/* ========== RESPONSIVE DESIGN (TABLET) ========== */
 @media (max-width: 900px) {
     .main {
-        flex-direction: column;
+        flex-direction: column; /* Layout jadi vertikal */
         align-items: center;
         gap: 30px;
         padding: 100px 20px 40px 20px;
@@ -34,6 +38,8 @@ body{
     }
 }
 
+
+/* ========== RESPONSIVE DESIGN (HP) ========== */
 @media (max-width: 500px) {
     .navbar {
         height: 55px;
@@ -68,26 +74,30 @@ body{
 }
 
 
+/* ========== GARIS PEMBATAS ========== */
 hr {
   border: none;
   border-top: 1px solid #1C1C1C;
   width: 100%;
 }
 
+
+/* ========== NAVBAR ========== */
 .navbar{
-    position:fixed;
+    position: fixed; /* Navbar selalu di atas saat discroll */
     height: 60px;
-    background: transparent; /* transparan */
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px); /* Efek blur kaca */
     width: 100%;
     border-top: 1px solid;
     border-bottom: 1px solid;
     margin: 0px;
 }
 
+/* List menu navbar */
 .navbar ul{
     list-style: none;
     display: flex;
@@ -95,26 +105,31 @@ hr {
     justify-content: center;
 }
 
+/* Link menu navbar */
 .navbar ul li a{
     text-decoration: none;
     font-weight: 1000;
     color: black;
-    
 } 
 
+/* Efek hover menu */
 .navbar ul li a:hover{
     color: #26593a;
     text-decoration: underline;
 }
+
+
+/* ========== LAYOUT UTAMA ========== */
 .main {
     display: flex;
     justify-content: center;
-    padding-top: 100px;
     align-items: flex-start;
     gap: 50px;
     padding: 80px 5% 50px 5%;
-
 }
+
+
+/* ========== KARTU PROFIL ========== */
 .image{
     display: flex;
     flex-direction: column;
@@ -124,9 +139,9 @@ hr {
     width: 320px;
     border: 1px solid black ;
     padding: 30px;
-   
-
 }
+
+/* Foto profil */
 .main img{
     aspect-ratio: 1 / 1;
     border-radius: 50%;
@@ -136,16 +151,22 @@ hr {
     border: 2px solid black;
     display: block;
 }
+
+/* Nama */
 .h2 {
     margin-bottom: 5px;
     letter-spacing: 1px;
 }
 
+/* Profesi */
 .p {
     font-size: 0.9rem;
     color: #000000;
     margin-bottom: 20px;
 }
+
+
+/* ========== SOSIAL MEDIA BUTTONS ========== */
 .sosmed {
     display: flex;
     gap: 10px;
@@ -154,6 +175,7 @@ hr {
     margin-top: 20px;
 }
 
+/* Style tombol sosial media */
 .sosmed a {
     display: flex;
     align-items: center;
@@ -162,35 +184,41 @@ hr {
     color: #1C1C1C;
     padding: 8px 16px;
     border: 1.5px solid #1C1C1C;
-    border-radius: 25px; /* Bikin tombol lonjong/rounded */
+    border-radius: 25px;
     font-size: 14px;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
-/* Hover Efek Warna Aplikasi (Sama seperti sebelumnya) */
+/* Warna brand saat hover */
 .sosmed a.link-linkedin:hover { background: #0077b5; color: white; border-color: #0077b5; }
 .sosmed a.link-wa:hover { background: #25d366; color: white; border-color: #25d366; }
 .sosmed a.link-github:hover { background: #333; color: white; border-color: #333; }
 .sosmed a.link-email:hover { background: #db4437; color: white; border-color: #db4437; }
 
-/* Efek sedikit membesar saat di-hover */
+/* Efek naik saat hover */
 .sosmed a:hover {
-    transform: translateY(-3px); /* Tombol naik sedikit */
+    transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+
+/* ========== BAGIAN HOME / DESKRIPSI ========== */
 .home{
     text-align: center;
     border-bottom: 1px black solid;
     padding: 20px 0;
     border-top: #000000 1px solid;
-    
 }
+
 .home div {
     font-size: 1.1rem;
     line-height: 1.8;
     text-align: justify;
 }
+
+
+/* ========== JUDUL LABEL SECTION ========== */
 .label {
     text-align: center;
     margin-top: 30px;
@@ -198,25 +226,31 @@ hr {
     color: #1C1C1C;
 }
 
+
+/* ========== ICON TEKNOLOGI ========== */
 .tec {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 15px;
-    flex-wrap: wrap; /* Agar ikon turun ke bawah jika layar sempit */
+    flex-wrap: wrap;
 }
 
 .tec img {
-    width: 45px; /* Ukuran ikon yang ideal */
+    width: 45px;
     height: 45px;
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: grayscale(20%); /* Memberikan kesan estetik sedikit abu-abu */
+    filter: grayscale(20%);
 }
 
+/* Efek hover ikon */
 .tec img:hover {
-    transform: scale(1.2); /* Ikon membesar saat disentuh */
-    filter: grayscale(0%); /* Warna menjadi full saat di-hover */
+    transform: scale(1.2);
+    filter: grayscale(0%);
 }
+
+
+/* ========== GITHUB CONTRIBUTION CHART ========== */
 .github-container {
     margin-top: 30px;
     text-align: center;
@@ -227,8 +261,8 @@ hr {
 }
 
 .chart-wrapper img {
-    width: 100%;        /* paksa penuh */      /* biar proporsional */
-    display: block;     /* hilangin jarak bawah gambar */
+    width: 100%;
+    display: block;
     border-radius: 10px;
     border: 1px solid #ccc;
 }
