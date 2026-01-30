@@ -5,10 +5,10 @@
 
 /* Background utama halaman */
 body{
-    background-color: #FDFBF6;
-    min-height: 100vh;
+    background-color: #F5F7FA;
+    margin: 0;
+    padding: 0;
 }
-
 
 /* ========== RESPONSIVE DESIGN (TABLET) ========== */
 @media (max-width: 900px) {
@@ -73,20 +73,12 @@ body{
     }
 }
 
-
-/* ========== GARIS PEMBATAS ========== */
-hr {
-  border: none;
-  border-top: 1px solid #1C1C1C;
-  width: 100%;
-}
-
-
 /* ========== NAVBAR ========== */
 .navbar{
+    top: 0;
     position: fixed; /* Navbar selalu di atas saat discroll */
     height: 60px;
-    background: transparent;
+    background:rgba(255,255,255,0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,18 +95,19 @@ hr {
     display: flex;
     gap: 40px;
     justify-content: center;
+    color: #222;
 }
 
 /* Link menu navbar */
 .navbar ul li a{
     text-decoration: none;
     font-weight: 1000;
-    color: black;
+    color: #222;
 } 
 
 /* Efek hover menu */
 .navbar ul li a:hover{
-    color: #26593a;
+    color: #26593A;
     text-decoration: underline;
 }
 
@@ -125,7 +118,12 @@ hr {
     justify-content: center;
     align-items: flex-start;
     gap: 50px;
-    padding: 80px 5% 50px 5%;
+    padding: 80px 5% 0px 5%;
+    border-bottom: rgb(196, 195, 195) 2px solid;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
 }
 
 
@@ -139,7 +137,12 @@ hr {
     width: 320px;
     border: 1px solid black ;
     padding: 30px;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
+
 
 /* Foto profil */
 .main img{
@@ -148,7 +151,7 @@ hr {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border: 2px solid black;
+    border: 3px solid #26593A;
     display: block;
 }
 
@@ -161,7 +164,7 @@ hr {
 /* Profesi */
 .p {
     font-size: 0.9rem;
-    color: #000000;
+    color: #555;
     margin-bottom: 20px;
 }
 
@@ -188,6 +191,8 @@ hr {
     font-size: 14px;
     font-weight: bold;
     transition: all 0.3s ease;
+    background: #fff;
+    border: 1px solid #ddd;
 }
 
 /* Warna brand saat hover */
@@ -206,15 +211,17 @@ hr {
 /* ========== BAGIAN HOME / DESKRIPSI ========== */
 .home{
     text-align: center;
-    border-bottom: 1px black solid;
     padding: 20px 0;
-    border-top: #000000 1px solid;
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+    background: #FFFFFF;
 }
 
 .home div {
     font-size: 1.1rem;
     line-height: 1.8;
     text-align: justify;
+    color: #333;
 }
 
 
@@ -240,7 +247,8 @@ hr {
     width: 45px;
     height: 45px;
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: grayscale(20%);
+    filter: grayscale(40%);
+    opacity: 1;
 }
 
 /* Efek hover ikon */
@@ -252,17 +260,25 @@ hr {
 
 /* ========== GITHUB CONTRIBUTION CHART ========== */
 .github-container {
-    margin-top: 30px;
+    margin-top: 0;
     text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background: #FFFFFF;
+    border-top: 1px solid #E0E0E0;
 }
 
+/* BIKIN WRAPPER KE TENGAH */
 .chart-wrapper {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto; /* INI YANG BIKIN CENTER */
 }
 
+/* IMG BIAR NGISI WRAPPER */
 .chart-wrapper img {
     width: 100%;
     display: block;
     border-radius: 10px;
     border: 1px solid #ccc;
 }
+
